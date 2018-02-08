@@ -20,7 +20,9 @@ install:
   - npm link @iota-pico/core @iota-pico/data @iota-pico/crypto
   - npm install
 script:
-  - npm run dist
+  - npm run build
+  - npm run docs
+  - npm run security
 cache:
   directories:
     - "node_modules"
