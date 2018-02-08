@@ -1,0 +1,11 @@
+.history
+.vscode
+node_modules
+src/**/*
+test/**/*
+.travis.yml
+tsconfig.json
+tslint.json
+*.tgz
+package-lock.*
+.nsprc

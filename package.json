@@ -1,0 +1,66 @@
+{
+    "name": "@iota-pico/pow-nodejs",
+    "version": "0.5.3",
+    "description": "IOTA Pico Framework Proof Of Work NodeJS",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "keywords": [
+        "iota",
+        "pico",
+        "interface",
+        "tangle",
+        "javascript",
+        "typescript",
+        "API"
+    ],
+    "directories": {
+        "doc": "docs",
+        "test": "test"
+    },
+    "author": "martyn@iota.eco",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/iotaeco/iota-pico-pow-nodejs.git"
+    },
+    "engines": {
+        "node": ">=8"
+    },
+    "scripts": {
+        "build-clean": "rimraf ./dist/*",
+        "build-compile": "tsc",
+        "build-lint": "tslint -p ./tsconfig.json -c ./tslint.json -t verbose",
+        "build": "npm-run-all build-clean build-compile build-lint",
+        "test-clean": "rimraf ./test/dist/**/*.js",
+        "test-lint": "tslint -p ./test/tsconfig.json -c ./tslint.json -t verbose",
+        "test-run": "mocha",
+        "test": "npm-run-all test-clean test-lint test-run",
+        "docs-clean": "rimraf ./docs/*",
+        "docs-generate": "typedoc --module commonjs --excludePrivate --theme markdown --readme none --hideGenerator --mode file --target es5 --exclude ./**/src/index.ts --out ./docs ./src",
+        "docs": "npm-run-all docs-clean docs-generate",
+        "security": "nsp check",
+        "dist": "npm-run-all build test docs security"
+    },
+    "dependencies": {
+        "@iota-pico/core": "^0.5.3",
+        "@iota-pico/crypto": "^0.5.3",
+        "@iota-pico/data": "^0.5.3",
+        "ffi": "^2.2.0"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.1.1",
+        "@types/ffi": "^0.1.0",
+        "@types/mocha": "^2.2.46",
+        "chai": "^4.1.2",
+        "mocha": "^5.0.0",
+        "npm-run-all": "^4.1.2",
+        "nsp": "^3.1.0",
+        "rimraf": "^2.6.2",
+        "ts-node": "^4.1.0",
+        "tslint": "^5.9.1",
+        "tslint-microsoft-contrib": "^5.0.2",
+        "typedoc": "^0.9.0",
+        "typedoc-plugin-markdown": "^1.0.12",
+        "typescript": "^2.7.0-rc"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "types": [
+            "@types/mocha",
+            "@types/chai"
+        ],
+        "declaration": false
+    },
+    "include": [
+        "./**/*.spec.ts"
+    ]
+}

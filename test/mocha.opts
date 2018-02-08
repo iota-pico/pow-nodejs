@@ -1,0 +1,2 @@
+--require test/mocha-hook
+**/*.spec.ts
