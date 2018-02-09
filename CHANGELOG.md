@@ -1,5 +1,5 @@
 # Changelog
 
-## v0.5.3
+## v0.6.0
 
 * First public release
