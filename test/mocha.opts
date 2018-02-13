@@ -1,2 +1,3 @@
 --require test/mocha-hook
+--timeout 10000
 **/*.spec.ts

@@ -16,7 +16,7 @@ The libraries are written in TypeScript so are all strongly typed. The modules a
 npm install @iota-pico/pow-js
 ```
 
-## POW JavaScript
+## POW NodeJS
 
 The library contains the Curl proof of work algorithm in plain NodeJS.
 
