@@ -9,6 +9,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const coreError_1 = require("@iota-pico/core/dist/error/coreError");
 const numberHelper_1 = require("@iota-pico/core/dist/helpers/numberHelper");
+const trytes_1 = require("@iota-pico/data/dist/data/trytes");
 const ffi = __importStar(require("ffi"));
 const fs = __importStar(require("fs"));
 const os = __importStar(require("os"));
@@ -64,7 +65,7 @@ class CurlProofOfWork {
                     reject(error);
                 }
                 else {
-                    resolve(returnedTrytes);
+                    resolve(trytes_1.Trytes.create(returnedTrytes));
                 }
             });
         });

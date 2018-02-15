@@ -190,7 +190,7 @@
         "ordered-imports": [
             true
         ],
-        "prefer-array-literal": true,
+        "prefer-array-literal": false,
         "prefer-const": true,
         "prefer-for-of": false,
         "prefer-method-signature": true,

@@ -64,7 +64,7 @@ export class CurlProofOfWork implements ICurlProofOfWork {
                 if (error) {
                     reject(error);
                 } else {
-                    resolve(returnedTrytes);
+                    resolve(Trytes.create(returnedTrytes));
                 }
             });
         });
