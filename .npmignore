@@ -1,5 +1,6 @@
 .history
 .vscode
+.nyc_output
 node_modules
 src/**/*
 test/**/*
@@ -9,3 +10,5 @@ tslint.json
 *.tgz
 package-lock.*
 .nsprc
+.nycrc
+coverage
