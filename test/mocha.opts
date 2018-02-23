@@ -1,5 +1,5 @@
 --require test/mocha-hook
 --require source-map-support/register
 --recursive
---timeout 10000
+--timeout 20000
 **/*.spec.ts
