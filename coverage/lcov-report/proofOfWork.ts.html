@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for proofOfWork.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> proofOfWork.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">77.42% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>24/31</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.33% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>8/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">79.31% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>23/29</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { NumberHelper } from "@iota-pico/core/dist/helpers/numberHelper";
+import { CryptoError } from "@iota-pico/crypto/dist/error/cryptoError";
+import { IProofOfWork } from "@iota-pico/crypto/dist/interfaces/IProofOfWork";
+import { Trytes } from "@iota-pico/data/dist/data/trytes";
+import * as ffi from "ffi";
+import * as fs from "fs";
+import * as os from "os";
+import * as path from "path";
+import * as util from "util";
+&nbsp;
+/**
+ * ProofOfWork implementation using NodeJS.
+ */
+export class ProofOfWork implements IProofOfWork {
+    /* @internal */
+    private _library: {
+        ccurl_pow: {
+            async(trytes: string, minWeightMagnitude: number, cb: (error: any, returnedTrytes: string) =&gt; void): void;
+        };
+    };
+&nbsp;
+    /**
+     * Allow the proof of work to perform any initialization.
+     * Will throw an exception if the implementation is not supported.
+     */
+    public async initialize(): Promise&lt;void&gt; {
+        const fullPath = path.resolve(path.join(__dirname, "../binaries/"));
+&nbsp;
+        const platform = os.platform();
+&nbsp;
+        let libFile = path.join(fullPath, platform, "libccurl");
+        switch (platform) {
+<span class="branch-0 cbranch-no" title="branch not covered" >            case "darwin": <span class="cstat-no" title="statement not covered" >libFile += ".dylib"; <span class="cstat-no" title="statement not covered" ></span>break;</span></span>
+            case "win32": libFile += ".dll"; break;
+<span class="branch-2 cbranch-no" title="branch not covered" >            default: <span class="cstat-no" title="statement not covered" >libFile += ".so";</span></span>
+        }
+&nbsp;
+        const stat = await util.promisify(fs.lstat)(libFile);
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (stat.isFile() || <span class="branch-1 cbranch-no" title="branch not covered" >stat.isSymbolicLink())</span> {
+            this._library = ffi.Library(libFile, {
+                ccurl_pow: ["string", ["string", "int"]]
+            });
+        } else {
+<span class="cstat-no" title="statement not covered" >            throw new CryptoError("Library files does not exist", { libFile });</span>
+        }
+    }
+&nbsp;
+    /**
+     * Perform a proof of work on the data.
+     * @param trytes The trytes to perform the pow on.
+     * @param minWeightMagnitude The minimum weight magnitude.
+     * @returns The trytes produced by the proof of work.
+     */
+    public async pow(trytes: Trytes, minWeightMagnitude: number): Promise&lt;Trytes&gt; {
+        return new Promise&lt;Trytes&gt;((resolve, reject) =&gt; {
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (trytes === undefined || trytes === null) {
+<span class="cstat-no" title="statement not covered" >                throw new CryptoError("Trytes can not be null or undefined");</span>
+            }
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (!NumberHelper.isInteger(minWeightMagnitude)) {
+<span class="cstat-no" title="statement not covered" >                throw new CryptoError("The minWeightMagnitude value is not an integer");</span>
+            }
+&nbsp;
+            this._library.ccurl_pow.async(trytes.toString(), minWeightMagnitude, (error, returnedTrytes) =&gt; {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (error) {
+<span class="cstat-no" title="statement not covered" >                    reject(error);</span>
+                } else {
+                    resolve(Trytes.fromString(returnedTrytes));
+                }
+            });
+        });
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Mar 01 2018 08:49:17 GMT+0300 (Turkey Standard Time)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

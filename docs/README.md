@@ -7,7 +7,7 @@
 
 ### Classes
 
-* [CurlProofOfWork](classes/curlproofofwork.md)
+* [ProofOfWork](classes/proofofwork.md)
 
 
 

@@ -1,6 +1,6 @@
-import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import { NumberHelper } from "@iota-pico/core/dist/helpers/numberHelper";
-import { ICurlProofOfWork } from "@iota-pico/crypto/dist/interfaces/ICurlProofOfWork";
+import { CryptoError } from "@iota-pico/crypto/dist/error/cryptoError";
+import { IProofOfWork } from "@iota-pico/crypto/dist/interfaces/IProofOfWork";
 import { Trytes } from "@iota-pico/data/dist/data/trytes";
 import * as ffi from "ffi";
 import * as fs from "fs";
@@ -9,9 +9,9 @@ import * as path from "path";
 import * as util from "util";
 
 /**
- * CurlProofOfWork implementation using NodeJS.
+ * ProofOfWork implementation using NodeJS.
  */
-export class CurlProofOfWork implements ICurlProofOfWork {
+export class ProofOfWork implements IProofOfWork {
     /* @internal */
     private _library: {
         ccurl_pow: {
@@ -41,7 +41,7 @@ export class CurlProofOfWork implements ICurlProofOfWork {
                 ccurl_pow: ["string", ["string", "int"]]
             });
         } else {
-            throw new CoreError("Library files does not exist", { libFile });
+            throw new CryptoError("Library files does not exist", { libFile });
         }
     }
 
@@ -54,17 +54,17 @@ export class CurlProofOfWork implements ICurlProofOfWork {
     public async pow(trytes: Trytes, minWeightMagnitude: number): Promise<Trytes> {
         return new Promise<Trytes>((resolve, reject) => {
             if (trytes === undefined || trytes === null) {
-                throw new CoreError("Trytes can not be null or undefined");
+                throw new CryptoError("Trytes can not be null or undefined");
             }
             if (!NumberHelper.isInteger(minWeightMagnitude)) {
-                throw new CoreError("The minWeightMagnitude value is not an integer");
+                throw new CryptoError("The minWeightMagnitude value is not an integer");
             }
 
             this._library.ccurl_pow.async(trytes.toString(), minWeightMagnitude, (error, returnedTrytes) => {
                 if (error) {
                     reject(error);
                 } else {
-                    resolve(Trytes.create(returnedTrytes));
+                    resolve(Trytes.fromString(returnedTrytes));
                 }
             });
         });
