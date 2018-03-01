@@ -52,14 +52,17 @@ export class ProofOfWork implements IProofOfWork {
      * @returns The trytes produced by the proof of work.
      */
     public async pow(trytes: Trytes, minWeightMagnitude: number): Promise<Trytes> {
-        return new Promise<Trytes>((resolve, reject) => {
-            if (trytes === undefined || trytes === null) {
-                throw new CryptoError("Trytes can not be null or undefined");
-            }
-            if (!NumberHelper.isInteger(minWeightMagnitude)) {
-                throw new CryptoError("The minWeightMagnitude value is not an integer");
-            }
+        if (this._library === undefined || this._library === null) {
+            throw new CryptoError("Library not loaded, have you called initialize");
+        }
+        if (trytes === undefined || trytes === null) {
+            throw new CryptoError("Trytes can not be null or undefined");
+        }
+        if (!NumberHelper.isInteger(minWeightMagnitude)) {
+            throw new CryptoError("The minWeightMagnitude value is not an integer");
+        }
 
+        return new Promise<Trytes>((resolve, reject) => {
             this._library.ccurl_pow.async(trytes.toString(), minWeightMagnitude, (error, returnedTrytes) => {
                 if (error) {
                     reject(error);
