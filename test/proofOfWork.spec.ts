@@ -152,7 +152,7 @@ describe("ProofOfWork", () => {
             const lib = {
                 ccurl_pow: {
                     async: (trytes: any, mwm: any, cb: any) => {
-                        cb("err!");
+                        cb(new Error("err!"));
                     }
                 }
             };

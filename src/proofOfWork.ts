@@ -17,7 +17,7 @@ import { INodePlatform } from "./INodePlatform";
  */
 export class ProofOfWork implements IProofOfWork {
     /* @internal */
-    private _nodePlatform: INodePlatform;
+    private readonly _nodePlatform: INodePlatform;
 
     /* @internal */
     private _library: {
