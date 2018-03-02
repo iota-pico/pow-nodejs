@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for index.ts</title>
+    <title>Code coverage report for INodePlatform.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="index.html">All files</a> index.ts
+      <a href="index.html">All files</a> INodePlatform.ts
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -47,14 +47,38 @@
 2
 3
 4
-5</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+5
+6
+7
+8
+9
+10
+11
+12
+13</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * Combined index of all the modules.
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Stats } from "fs";
+&nbsp;
+/**
+ * INodePlatform interface.
  */
-export * from "./proofOfWork";
+export interface INodePlatform {
+    pathResolve(path: string): string;
+    pathJoin(...args: any[]): string;
+    platform(): string;
+    lstat(path: string, callback: (err: NodeJS.ErrnoException, stats: Stats) =&gt; void): void;
+    loadLibrary(filename: string, functions: any): any;
+}
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
