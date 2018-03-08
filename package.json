@@ -2,8 +2,8 @@
     "name": "@iota-pico/pow-nodejs",
     "version": "0.7.0",
     "description": "IOTA Pico Framework Proof Of Work NodeJS",
-    "main": "dist/index.js",
     "typings": "dist/index.d.ts",
+    "main": "dist/index.js",
     "keywords": [
         "iota",
         "pico",
@@ -49,6 +49,7 @@
         "ffi": "^2.2.0"
     },
     "devDependencies": {
+        "@babel/runtime": "^7.0.0-beta.40",
         "@types/chai": "^4.1.1",
         "@types/ffi": "^0.1.0",
         "@types/mocha": "^2.2.46",

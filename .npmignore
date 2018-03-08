@@ -12,3 +12,5 @@ package-lock.*
 .nsprc
 .nycrc
 coverage
+webpack.config.*
+.babelrc
