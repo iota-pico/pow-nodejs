@@ -5,9 +5,10 @@ import { INodePlatform } from "./INodePlatform";
 /**
  * ProofOfWork implementation using NodeJS.
  */
-export declare class ProofOfWork implements IProofOfWork {
+export declare class ProofOfWorkNodeJs implements IProofOfWork {
     /**
      * Create a new instance of ProofOfWork.
+     * @param nodePlatform Provides platform specific functions, optional mostly used for testing.
      */
     constructor(nodePlatform?: INodePlatform);
     /**

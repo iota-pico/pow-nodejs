@@ -15,7 +15,7 @@ import { INodePlatform } from "./INodePlatform";
 /**
  * ProofOfWork implementation using NodeJS.
  */
-export class ProofOfWork implements IProofOfWork {
+export class ProofOfWorkNodeJs implements IProofOfWork {
     /* @internal */
     private readonly _nodePlatform: INodePlatform;
 
@@ -28,6 +28,7 @@ export class ProofOfWork implements IProofOfWork {
 
     /**
      * Create a new instance of ProofOfWork.
+     * @param nodePlatform Provides platform specific functions, optional mostly used for testing.
      */
     constructor(nodePlatform?: INodePlatform) {
         if (ObjectHelper.isEmpty(nodePlatform)) {

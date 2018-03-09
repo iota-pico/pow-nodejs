@@ -7,7 +7,7 @@
 
 ### Classes
 
-* [ProofOfWork](classes/proofofwork.md)
+* [ProofOfWorkNodeJs](classes/proofofworknodejs.md)
 
 
 ### Interfaces
