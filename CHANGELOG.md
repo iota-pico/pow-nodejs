@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.7.0
+## v0.9.0
 
 * Added code coverage to testing
 
