@@ -34,7 +34,7 @@ ProofOfWork implementation using NodeJS.
 ### ⊕ **new ProofOfWorkNodeJs**(nodePlatform?: *[INodePlatform](../interfaces/inodeplatform.md)*): [ProofOfWorkNodeJs](proofofworknodejs.md)
 
 
-*Defined in [proofOfWorkNodeJs.ts:27](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/1a4b2eb/src/proofOfWorkNodeJs.ts#L27)*
+*Defined in [proofOfWorkNodeJs.ts:27](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/023f54e/src/proofOfWorkNodeJs.ts#L27)*
 
 
 
@@ -65,7 +65,7 @@ Create a new instance of ProofOfWork.
 
 
 
-*Defined in [proofOfWorkNodeJs.ts:51](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/1a4b2eb/src/proofOfWorkNodeJs.ts#L51)*
+*Defined in [proofOfWorkNodeJs.ts:51](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/023f54e/src/proofOfWorkNodeJs.ts#L51)*
 
 
 
@@ -90,7 +90,7 @@ ___
 
 
 
-*Defined in [proofOfWorkNodeJs.ts:77](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/1a4b2eb/src/proofOfWorkNodeJs.ts#L77)*
+*Defined in [proofOfWorkNodeJs.ts:77](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/023f54e/src/proofOfWorkNodeJs.ts#L77)*
 
 
 
@@ -117,7 +117,7 @@ ___
 
 
 
-*Defined in [proofOfWorkNodeJs.ts:89](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/1a4b2eb/src/proofOfWorkNodeJs.ts#L89)*
+*Defined in [proofOfWorkNodeJs.ts:89](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/023f54e/src/proofOfWorkNodeJs.ts#L89)*
 
 
 
