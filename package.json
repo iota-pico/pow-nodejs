@@ -1,6 +1,6 @@
 {
     "name": "@iota-pico/pow-nodejs",
-    "version": "0.9.0",
+    "version": "0.9.1",
     "description": "IOTA Pico Framework Proof Of Work NodeJS",
     "typings": "dist/index.d.ts",
     "main": "dist/index.js",
@@ -43,9 +43,9 @@
         "dist": "npm-run-all build test docs"
     },
     "dependencies": {
-        "@iota-pico/core": "^0.9.0",
-        "@iota-pico/crypto": "^0.9.0",
-        "@iota-pico/data": "^0.9.0",
+        "@iota-pico/core": "^0.9.1",
+        "@iota-pico/crypto": "^0.9.1",
+        "@iota-pico/data": "^0.9.1",
         "ffi": "^2.2.0"
     },
     "devDependencies": {
