@@ -30,13 +30,7 @@ module.exports = {
     },
     target: "node",
     externals: {
-        "ffi": "ffi",
-        "big-integer": {
-            "amd": "big-integer",
-            "commonjs": "big-integer",
-            "commonjs2": "big-integer",
-            "root": "bigInt"
-        }
+        "ffi": "ffi"
     },
     //mode: isProd ? "production" : "development",
     devtool: isProd ? undefined : "inline-source-map",
