@@ -67,8 +67,15 @@ module.exports = {
         ]
     },
     node: {
+        fs: "empty",
+        path: "empty",
+        console: false,
+        global: false,
+        process: false,
+        __filename: false,
         __dirname: false,
-        __filename: false
+        Buffer: false,
+        setImmediate: false
     },
     plugins
 };
