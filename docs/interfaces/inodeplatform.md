@@ -17,7 +17,7 @@ INodePlatform interface.
 
 
 
-*Defined in [INodePlatform.ts:11](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/0ba0400/src/INodePlatform.ts#L11)*
+*Defined in [INodePlatform.ts:11](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/50c3b8a/src/INodePlatform.ts#L11)*
 
 
 
@@ -48,7 +48,7 @@ ___
 
 
 
-*Defined in [INodePlatform.ts:10](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/0ba0400/src/INodePlatform.ts#L10)*
+*Defined in [INodePlatform.ts:10](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/50c3b8a/src/INodePlatform.ts#L10)*
 
 
 
@@ -79,7 +79,7 @@ ___
 
 
 
-*Defined in [INodePlatform.ts:8](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/0ba0400/src/INodePlatform.ts#L8)*
+*Defined in [INodePlatform.ts:8](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/50c3b8a/src/INodePlatform.ts#L8)*
 
 
 
@@ -109,7 +109,7 @@ ___
 
 
 
-*Defined in [INodePlatform.ts:7](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/0ba0400/src/INodePlatform.ts#L7)*
+*Defined in [INodePlatform.ts:7](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/50c3b8a/src/INodePlatform.ts#L7)*
 
 
 
@@ -139,7 +139,7 @@ ___
 
 
 
-*Defined in [INodePlatform.ts:9](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/0ba0400/src/INodePlatform.ts#L9)*
+*Defined in [INodePlatform.ts:9](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/50c3b8a/src/INodePlatform.ts#L9)*
 
 
 

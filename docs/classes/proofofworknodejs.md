@@ -54,7 +54,7 @@ ProofOfWork implementation using NodeJS.
 
 *Overrides ProofOfWorkBase.__constructor*
 
-*Defined in [proofOfWorkNodeJs.ts:26](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/0ba0400/src/proofOfWorkNodeJs.ts#L26)*
+*Defined in [proofOfWorkNodeJs.ts:26](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/50c3b8a/src/proofOfWorkNodeJs.ts#L26)*
 
 
 
@@ -109,7 +109,7 @@ ___
 
 *Overrides ProofOfWorkBase.initialize*
 
-*Defined in [proofOfWorkNodeJs.ts:52](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/0ba0400/src/proofOfWorkNodeJs.ts#L52)*
+*Defined in [proofOfWorkNodeJs.ts:52](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/50c3b8a/src/proofOfWorkNodeJs.ts#L52)*
 
 
 
@@ -176,7 +176,7 @@ ___
 
 *Overrides ProofOfWorkBase.singlePow*
 
-*Defined in [proofOfWorkNodeJs.ts:82](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/0ba0400/src/proofOfWorkNodeJs.ts#L82)*
+*Defined in [proofOfWorkNodeJs.ts:82](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/50c3b8a/src/proofOfWorkNodeJs.ts#L82)*
 
 
 

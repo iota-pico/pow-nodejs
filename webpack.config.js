@@ -20,7 +20,7 @@ module.exports = {
         path: path.resolve(__dirname, './pkg'),
         filename: pkgName + (isProd ? '.min' : '') + '.js',
         libraryTarget: 'commonjs2',
-        libraryExport: 'default',
+        libraryExport: undefined,
         library: {
             root: rootName,
             amd: packageJson.name,
