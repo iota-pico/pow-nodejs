@@ -7,6 +7,19 @@
 
 ProofOfWork implementation using NodeJS.
 
+## Hierarchy
+
+
+ `ProofOfWorkBase`
+
+**↳ ProofOfWorkNodeJs**
+
+
+
+
+
+
+
 ## Implements
 
 * `IProofOfWork`
@@ -18,11 +31,16 @@ ProofOfWork implementation using NodeJS.
 * [constructor](proofofworknodejs.md#constructor)
 
 
+### Properties
+
+* [MAX_TIMESTAMP_VALUE](proofofworknodejs.md#max_timestamp_value)
+
+
 ### Methods
 
 * [initialize](proofofworknodejs.md#initialize)
-* [performsSingle](proofofworknodejs.md#performssingle)
 * [pow](proofofworknodejs.md#pow)
+* [singlePow](proofofworknodejs.md#singlepow)
 
 
 
@@ -31,10 +49,12 @@ ProofOfWork implementation using NodeJS.
 <a id="constructor"></a>
 
 
-### ⊕ **new ProofOfWorkNodeJs**(nodePlatform?: *[INodePlatform](../interfaces/inodeplatform.md)*): [ProofOfWorkNodeJs](proofofworknodejs.md)
+### ⊕ **new ProofOfWorkNodeJs**(nodePlatform?: *[INodePlatform](../interfaces/inodeplatform.md)*, timeService?: *`ITimeService`*): [ProofOfWorkNodeJs](proofofworknodejs.md)
 
 
-*Defined in [proofOfWorkNodeJs.ts:27](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/023f54e/src/proofOfWorkNodeJs.ts#L27)*
+*Overrides ProofOfWorkBase.__constructor*
+
+*Defined in [proofOfWorkNodeJs.ts:26](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/0ba0400/src/proofOfWorkNodeJs.ts#L26)*
 
 
 
@@ -46,6 +66,7 @@ Create a new instance of ProofOfWork.
 | Param | Type | Description |
 | ------ | ------ | ------ |
 | nodePlatform | [INodePlatform](../interfaces/inodeplatform.md)   |  Provides platform specific functions, optional mostly used for testing. |
+| timeService | `ITimeService`   |  Service to get the time for attachments. |
 
 
 
@@ -54,6 +75,27 @@ Create a new instance of ProofOfWork.
 **Returns:** [ProofOfWorkNodeJs](proofofworknodejs.md)
 
 ---
+
+
+## Properties
+<a id="max_timestamp_value"></a>
+
+### «Static» MAX_TIMESTAMP_VALUE
+
+**●  MAX_TIMESTAMP_VALUE**:  *`number`* 
+
+*Inherited from ProofOfWorkBase.MAX_TIMESTAMP_VALUE*
+
+*Defined in D:/Workarea/iotaeco/iota-pico-pow-nodejs/node_modules/@iota-pico/crypto/dist/proofOfWork/proofOfWorkBase.d.ts:12*
+
+
+
+The maximum timestamp value used in proof of work.
+
+
+
+
+___
 
 
 ## Methods
@@ -65,7 +107,9 @@ Create a new instance of ProofOfWork.
 
 
 
-*Defined in [proofOfWorkNodeJs.ts:51](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/023f54e/src/proofOfWorkNodeJs.ts#L51)*
+*Overrides ProofOfWorkBase.initialize*
+
+*Defined in [proofOfWorkNodeJs.ts:52](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/0ba0400/src/proofOfWorkNodeJs.ts#L52)*
 
 
 
@@ -82,33 +126,6 @@ Allow the proof of work to perform any initialization. Will throw an exception i
 
 ___
 
-<a id="performssingle"></a>
-
-###  performsSingle
-
-► **performsSingle**(): `boolean`
-
-
-
-*Defined in [proofOfWorkNodeJs.ts:77](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/023f54e/src/proofOfWorkNodeJs.ts#L77)*
-
-
-
-Performs single conversion per pow call.
-
-
-
-
-**Returns:** `boolean`
-True if pow only does one conversion.
-
-
-
-
-
-
-___
-
 <a id="pow"></a>
 
 ###  pow
@@ -117,7 +134,9 @@ ___
 
 
 
-*Defined in [proofOfWorkNodeJs.ts:89](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/023f54e/src/proofOfWorkNodeJs.ts#L89)*
+*Inherited from ProofOfWorkBase.pow*
+
+*Defined in D:/Workarea/iotaeco/iota-pico-pow-nodejs/node_modules/@iota-pico/crypto/dist/proofOfWork/proofOfWorkBase.d.ts:31*
 
 
 
@@ -138,6 +157,44 @@ Perform a proof of work on the data.
 
 
 **Returns:** `Promise`.<`Trytes`[]>
+The trytes produced by the proof of work.
+
+
+
+
+
+
+___
+
+<a id="singlepow"></a>
+
+###  singlePow
+
+► **singlePow**(trytes: *`Trytes`*, minWeightMagnitude: *`number`*): `Promise`.<`Trytes`>
+
+
+
+*Overrides ProofOfWorkBase.singlePow*
+
+*Defined in [proofOfWorkNodeJs.ts:82](https://github.com/iotaeco/iota-pico-pow-nodejs/blob/0ba0400/src/proofOfWorkNodeJs.ts#L82)*
+
+
+
+Perform a proof of work on a single item.
+
+
+**Parameters:**
+
+| Param | Type | Description |
+| ------ | ------ | ------ |
+| trytes | `Trytes`   |  The trytes to perform the pow on. |
+| minWeightMagnitude | `number`   |  The minimum weight magnitude. |
+
+
+
+
+
+**Returns:** `Promise`.<`Trytes`>
 The trytes produced by the proof of work.
 
 

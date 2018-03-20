@@ -3,12 +3,14 @@
 
 # IOTA Pico Framework Proof Of Work NodeJS
 
-The library contains the Curl proof of work algorithm in plain NodeJS.
+The library contains the Curl proof of work algorithm for use with NodeJS.
+
+It is a wrapper around the ccurl binaries [https://github.com/iotaledger/ccurl](https://github.com/iotaledger/ccurl) and is very fast.
 
 # Installation
 
 ```shell
-npm install @iota-pico/pow-js --save
+npm install @iota-pico/pow-nodejs --save
 ```
 
 # Documentation

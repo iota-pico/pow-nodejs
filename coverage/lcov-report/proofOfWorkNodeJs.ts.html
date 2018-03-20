@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>39/39</span>
+        <span class='fraction'>40/40</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>6/6</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>37/37</span>
+        <span class='fraction'>38/38</span>
       </div>
     </div>
     <p class="quiet">
@@ -148,19 +148,11 @@
 <a name='L100'></a><a href='#L100'>100</a>
 <a name='L101'></a><a href='#L101'>101</a>
 <a name='L102'></a><a href='#L102'>102</a>
-<a name='L103'></a><a href='#L103'>103</a>
-<a name='L104'></a><a href='#L104'>104</a>
-<a name='L105'></a><a href='#L105'>105</a>
-<a name='L106'></a><a href='#L106'>106</a>
-<a name='L107'></a><a href='#L107'>107</a>
-<a name='L108'></a><a href='#L108'>108</a>
-<a name='L109'></a><a href='#L109'>109</a>
-<a name='L110'></a><a href='#L110'>110</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L103'></a><a href='#L103'>103</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -188,8 +180,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -211,6 +205,8 @@
 <span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">6x</span>
@@ -224,16 +220,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -264,12 +250,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ArrayHelper } from "@iota-pico/core/dist/helpers/arrayHelper";
-import { NumberHelper } from "@iota-pico/core/dist/helpers/numberHelper";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { NumberHelper } from "@iota-pico/core/dist/helpers/numberHelper";
 import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
+import { ITimeService } from "@iota-pico/core/dist/interfaces/ITimeService";
 import { CryptoError } from "@iota-pico/crypto/dist/error/cryptoError";
-import { IProofOfWork } from "@iota-pico/crypto/dist/interfaces/IProofOfWork";
-import { Hash } from "@iota-pico/data/dist/data/hash";
+import { ProofOfWorkBase } from "@iota-pico/crypto/dist/proofOfWork/proofOfWorkBase";
 import { Trytes } from "@iota-pico/data/dist/data/trytes";
 import * as ffi from "ffi";
 import * as fs from "fs";
@@ -281,7 +266,7 @@ import { INodePlatform } from "./INodePlatform";
 /**
  * ProofOfWork implementation using NodeJS.
  */
-export class ProofOfWorkNodeJs implements IProofOfWork {
+export class ProofOfWorkNodeJs extends ProofOfWorkBase {
     /* @internal */
     private readonly _nodePlatform: INodePlatform;
 &nbsp;
@@ -295,8 +280,10 @@ export class ProofOfWorkNodeJs implements IProofOfWork {
     /**
      * Create a new instance of ProofOfWork.
      * @param nodePlatform Provides platform specific functions, optional mostly used for testing.
+     * @param timeService Service to get the time for attachments.
      */
-    constructor(nodePlatform?: INodePlatform) {
+    constructor(nodePlatform?: INodePlatform, timeService?: ITimeService) {
+        super(timeService);
         if (ObjectHelper.isEmpty(nodePlatform)) {
             this._nodePlatform = {
                 pathResolve: path.resolve,
@@ -315,6 +302,8 @@ export class ProofOfWorkNodeJs implements IProofOfWork {
      * Will throw an exception if the implementation is not supported.
      */
     public async initialize(): Promise&lt;void&gt; {
+        await super.initialize();
+&nbsp;
         const fullPath = this._nodePlatform.pathJoin(path.join(__dirname, "../binaries/"));
 &nbsp;
         const platform = this._nodePlatform.platform();
@@ -337,37 +326,27 @@ export class ProofOfWorkNodeJs implements IProofOfWork {
     }
 &nbsp;
     /**
-     * Performs single conversion per pow call.
-     * @returns True if pow only does one conversion.
-     */
-    public performsSingle(): boolean {
-        return true;
-    }
-&nbsp;
-    /**
-     * Perform a proof of work on the data.
-     * @param trunkTransaction The trunkTransaction to use for the pow.
-     * @param branchTransaction The branchTransaction to use for the pow.
+     * Perform a proof of work on a single item.
      * @param trytes The trytes to perform the pow on.
      * @param minWeightMagnitude The minimum weight magnitude.
      * @returns The trytes produced by the proof of work.
      */
-    public async pow(trunkTransaction: Hash, branchTransaction: Hash, trytes: Trytes[], minWeightMagnitude: number): Promise&lt;Trytes[]&gt; {
-        return new Promise&lt;Trytes[]&gt;((resolve, reject) =&gt; {
+    public async singlePow(trytes: Trytes, minWeightMagnitude: number): Promise&lt;Trytes&gt; {
+        return new Promise&lt;Trytes&gt;((resolve, reject) =&gt; {
             if (ObjectHelper.isEmpty(this._library)) {
                 throw new CryptoError("Library not loaded, have you called initialize");
             }
-            if (!ArrayHelper.isTyped(trytes, Trytes)) {
-                throw new CryptoError("The trytes must be an array of type Trytes");
+            if (!ObjectHelper.isType(trytes, Trytes)) {
+                throw new CryptoError("The trytes must be an object of type Trytes");
             }
             if (!NumberHelper.isInteger(minWeightMagnitude) || minWeightMagnitude &lt;= 0) {
                 throw new CryptoError("The minWeightMagnitude must be &gt; 0");
             }
-            this._library.ccurl_pow.async(trytes[0].toString(), minWeightMagnitude, (error, returnedTrytes) =&gt; {
+            this._library.ccurl_pow.async(trytes.toString(), minWeightMagnitude, (error, returnedTrytes) =&gt; {
                 if (error) {
                     reject(error);
                 } else {
-                    resolve([ Trytes.fromString(returnedTrytes) ]);
+                    resolve(Trytes.fromString(returnedTrytes));
                 }
             });
         });
@@ -379,7 +358,7 @@ export class ProofOfWorkNodeJs implements IProofOfWork {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Mar 19 2018 09:26:09 GMT+0300 (Turkey Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Mar 20 2018 12:38:18 GMT+0300 (Turkey Standard Time)
 </div>
 </div>
 <script src="prettify.js"></script>

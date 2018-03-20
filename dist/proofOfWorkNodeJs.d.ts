@@ -1,33 +1,27 @@
-import { IProofOfWork } from "@iota-pico/crypto/dist/interfaces/IProofOfWork";
-import { Hash } from "@iota-pico/data/dist/data/hash";
+import { ITimeService } from "@iota-pico/core/dist/interfaces/ITimeService";
+import { ProofOfWorkBase } from "@iota-pico/crypto/dist/proofOfWork/proofOfWorkBase";
 import { Trytes } from "@iota-pico/data/dist/data/trytes";
 import { INodePlatform } from "./INodePlatform";
 /**
  * ProofOfWork implementation using NodeJS.
  */
-export declare class ProofOfWorkNodeJs implements IProofOfWork {
+export declare class ProofOfWorkNodeJs extends ProofOfWorkBase {
     /**
      * Create a new instance of ProofOfWork.
      * @param nodePlatform Provides platform specific functions, optional mostly used for testing.
+     * @param timeService Service to get the time for attachments.
      */
-    constructor(nodePlatform?: INodePlatform);
+    constructor(nodePlatform?: INodePlatform, timeService?: ITimeService);
     /**
      * Allow the proof of work to perform any initialization.
      * Will throw an exception if the implementation is not supported.
      */
     initialize(): Promise<void>;
     /**
-     * Performs single conversion per pow call.
-     * @returns True if pow only does one conversion.
-     */
-    performsSingle(): boolean;
-    /**
-     * Perform a proof of work on the data.
-     * @param trunkTransaction The trunkTransaction to use for the pow.
-     * @param branchTransaction The branchTransaction to use for the pow.
+     * Perform a proof of work on a single item.
      * @param trytes The trytes to perform the pow on.
      * @param minWeightMagnitude The minimum weight magnitude.
      * @returns The trytes produced by the proof of work.
      */
-    pow(trunkTransaction: Hash, branchTransaction: Hash, trytes: Trytes[], minWeightMagnitude: number): Promise<Trytes[]>;
+    singlePow(trytes: Trytes, minWeightMagnitude: number): Promise<Trytes>;
 }
