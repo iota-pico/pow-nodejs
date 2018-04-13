@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.9.3
+
+* Fix Release
+
 ## v0.9.2
 
 * Can now perform multi-pass pow as well as single pass
