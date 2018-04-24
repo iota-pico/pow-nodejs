@@ -1,6 +1,4 @@
 
-
-
 #  @iota-pico/pow-nodejs
 
 ## Index
@@ -9,11 +7,9 @@
 
 * [ProofOfWorkNodeJs](classes/proofofworknodejs.md)
 
-
 ### Interfaces
 
 * [INodePlatform](interfaces/inodeplatform.md)
 
-
-
 ---
+
