@@ -3,16 +3,16 @@ node_js:
   - 8
 install:
   - cd ../../
-  - git clone --branch=$TRAVIS_BRANCH https://github.com/iota-pico/core.git https://github.com/iota-pico/core
+  - git clone --branch=$TRAVIS_BRANCH https://github.com/iota-pico/core.git core
   - cd https://github.com/iota-pico/core
   - npm link
   - cd ../../
-  - git clone --branch=$TRAVIS_BRANCH https://github.com/iota-pico/data.git https://github.com/iota-pico/data
+  - git clone --branch=$TRAVIS_BRANCH https://github.com/iota-pico/data.git data
   - cd https://github.com/iota-pico/data
   - npm link @iota-pico/core
   - npm link
   - cd ../../
-  - git clone --branch=$TRAVIS_BRANCH https://github.com/iota-pico/crypto.git https://github.com/iota-pico/crypto
+  - git clone --branch=$TRAVIS_BRANCH https://github.com/iota-pico/crypto.git crypto
   - cd https://github.com/iota-pico/crypto
   - npm link @iota-pico/core @iota-pico/data
   - npm link
