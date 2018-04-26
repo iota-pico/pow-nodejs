@@ -40,7 +40,7 @@ ProofOfWork implementation using NodeJS.
 
 *Overrides ProofOfWorkBase.__constructor*
 
-*Defined in [proofOfWorkNodeJs.ts:26](https://github.com/iota-pico/pow-nodejs/blob/1c23c91/src/proofOfWorkNodeJs.ts#L26)*
+*Defined in [proofOfWorkNodeJs.ts:26](https://github.com/iota-pico/pow-nodejs/blob/8a4ee1e/src/proofOfWorkNodeJs.ts#L26)*
 
 Create a new instance of ProofOfWork.
 
@@ -81,7 +81,7 @@ ___
 
 *Overrides ProofOfWorkBase.initialize*
 
-*Defined in [proofOfWorkNodeJs.ts:52](https://github.com/iota-pico/pow-nodejs/blob/1c23c91/src/proofOfWorkNodeJs.ts#L52)*
+*Defined in [proofOfWorkNodeJs.ts:52](https://github.com/iota-pico/pow-nodejs/blob/8a4ee1e/src/proofOfWorkNodeJs.ts#L52)*
 
 Allow the proof of work to perform any initialization. Will throw an exception if the implementation is not supported.
 
@@ -97,7 +97,7 @@ ___
 
 *Inherited from ProofOfWorkBase.pow*
 
-*Defined in D:/Workarea/iota-pico/pow-nodejs/node_modules/@iota-pico/crypto/dist/proofOfWork/proofOfWorkBase.d.ts:31*
+*Defined in D:/Workarea/iota-pico/pow-nodejs/node_modules/@iota-pico/crypto/dist/proofOfWork/proofOfWorkBase.d.ts:32*
 
 Perform a proof of work on the data.
 
@@ -123,7 +123,7 @@ ___
 
 *Overrides ProofOfWorkBase.singlePow*
 
-*Defined in [proofOfWorkNodeJs.ts:82](https://github.com/iota-pico/pow-nodejs/blob/1c23c91/src/proofOfWorkNodeJs.ts#L82)*
+*Defined in [proofOfWorkNodeJs.ts:82](https://github.com/iota-pico/pow-nodejs/blob/8a4ee1e/src/proofOfWorkNodeJs.ts#L82)*
 
 Perform a proof of work on a single item.
 

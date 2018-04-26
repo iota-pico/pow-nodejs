@@ -1,10 +1,8 @@
 {
     "extends": [
         "tslint:all",
-        "tslint-microsoft-contrib"
-    ],
-    "rulesDirectory": [
-        "node_modules/tslint-microsoft-contrib"
+        "tslint-microsoft-contrib",
+        "tslint-eslint-rules"
     ],
     "rules": {
         "insecure-random": true,
@@ -159,7 +157,7 @@
         "new-parens": true,
         "no-construct": true,
         "no-default-export": false,
-        "no-empty-interface": false,
+        "no-empty-interface": true,
         "no-for-in": false,
         "no-function-expression": true,
         "no-inferrable-types": false,
@@ -194,7 +192,6 @@
         "prefer-const": true,
         "prefer-for-of": false,
         "prefer-method-signature": true,
-        "prefer-readonly": true,
         "prefer-template": true,
         "return-undefined": false,
         "typedef": [
@@ -322,6 +319,21 @@
         "no-var-self": false,
         "valid-typeof": false,
         "no-switch-case-fall-through": false,
-        "typeof-compare": false
+        "typeof-compare": false,
+        "no-dynamic-delete": false,
+        "binary-expression-operand-order": false,
+        "valid-jsdoc": [
+            true,
+            {
+                "requireParamType": false,
+                "prefer": {
+                    "return": "returns"
+                },
+                "requireReturn": false,
+                "requireReturnType": false,
+                "requireParamDescription": true,
+                "requireReturnDescription": true
+            }
+        ]
     }
 }
