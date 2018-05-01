@@ -36,11 +36,13 @@ ProofOfWork implementation using NodeJS.
 
 <a id="constructor"></a>
 
-### ⊕ **new ProofOfWorkNodeJs**(nodePlatform?: *[INodePlatform](../interfaces/inodeplatform.md)*, timeService?: *`ITimeService`*): [ProofOfWorkNodeJs](proofofworknodejs.md)
+###  constructor
+
+⊕ **new ProofOfWorkNodeJs**(nodePlatform?: *[INodePlatform](../interfaces/inodeplatform.md)*, timeService?: *`ITimeService`*): [ProofOfWorkNodeJs](proofofworknodejs.md)
 
 *Overrides ProofOfWorkBase.__constructor*
 
-*Defined in [proofOfWorkNodeJs.ts:26](https://github.com/iota-pico/pow-nodejs/blob/8a4ee1e/src/proofOfWorkNodeJs.ts#L26)*
+*Defined in [proofOfWorkNodeJs.ts:26](https://github.com/iota-pico/pow-nodejs/blob/4e729d1/src/proofOfWorkNodeJs.ts#L26)*
 
 Create a new instance of ProofOfWork.
 
@@ -48,12 +50,12 @@ Create a new instance of ProofOfWork.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| nodePlatform | [INodePlatform](../interfaces/inodeplatform.md)   |  Provides platform specific functions, optional mostly used for testing. |
-| timeService | `ITimeService`   |  Service to get the time for attachments. |
+| `Optional` nodePlatform | [INodePlatform](../interfaces/inodeplatform.md) |  Provides platform specific functions, optional mostly used for testing. |
+| `Optional` timeService | `ITimeService` |  Service to get the time for attachments. |
 
 **Returns:** [ProofOfWorkNodeJs](proofofworknodejs.md)
 
----
+___
 
 ## Properties
 
@@ -61,7 +63,7 @@ Create a new instance of ProofOfWork.
 
 ### `<Static>` MAX_TIMESTAMP_VALUE
 
-**●  MAX_TIMESTAMP_VALUE**:  *`number`* 
+**● MAX_TIMESTAMP_VALUE**: *`number`*
 
 *Inherited from ProofOfWorkBase.MAX_TIMESTAMP_VALUE*
 
@@ -77,23 +79,22 @@ ___
 
 ###  initialize
 
-▸ **initialize**(): `Promise`.<`void`>
+▸ **initialize**(): `Promise`<`void`>
 
 *Overrides ProofOfWorkBase.initialize*
 
-*Defined in [proofOfWorkNodeJs.ts:52](https://github.com/iota-pico/pow-nodejs/blob/8a4ee1e/src/proofOfWorkNodeJs.ts#L52)*
+*Defined in [proofOfWorkNodeJs.ts:52](https://github.com/iota-pico/pow-nodejs/blob/4e729d1/src/proofOfWorkNodeJs.ts#L52)*
 
 Allow the proof of work to perform any initialization. Will throw an exception if the implementation is not supported.
 
-**Returns:** `Promise`.<`void`>
+**Returns:** `Promise`<`void`>
 
 ___
-
 <a id="pow"></a>
 
 ###  pow
 
-▸ **pow**(trunkTransaction: *`Hash`*, branchTransaction: *`Hash`*, trytes: *`Trytes`[]*, minWeightMagnitude: *`number`*): `Promise`.<`Trytes`[]>
+▸ **pow**(trunkTransaction: *`Hash`*, branchTransaction: *`Hash`*, trytes: *`Trytes`[]*, minWeightMagnitude: *`number`*): `Promise`<`Trytes`[]>
 
 *Inherited from ProofOfWorkBase.pow*
 
@@ -105,25 +106,24 @@ Perform a proof of work on the data.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| trunkTransaction | `Hash`   |  The trunkTransaction to use for the pow. |
-| branchTransaction | `Hash`   |  The branchTransaction to use for the pow. |
-| trytes | `Trytes`[]   |  The trytes to perform the pow on. |
-| minWeightMagnitude | `number`   |  The minimum weight magnitude. |
+| trunkTransaction | `Hash` |  The trunkTransaction to use for the pow. |
+| branchTransaction | `Hash` |  The branchTransaction to use for the pow. |
+| trytes | `Trytes`[] |  The trytes to perform the pow on. |
+| minWeightMagnitude | `number` |  The minimum weight magnitude. |
 
-**Returns:** `Promise`.<`Trytes`[]>
+**Returns:** `Promise`<`Trytes`[]>
 The trytes produced by the proof of work.
 
 ___
-
 <a id="singlepow"></a>
 
 ###  singlePow
 
-▸ **singlePow**(trytes: *`Trytes`*, minWeightMagnitude: *`number`*): `Promise`.<`Trytes`>
+▸ **singlePow**(trytes: *`Trytes`*, minWeightMagnitude: *`number`*): `Promise`<`Trytes`>
 
 *Overrides ProofOfWorkBase.singlePow*
 
-*Defined in [proofOfWorkNodeJs.ts:82](https://github.com/iota-pico/pow-nodejs/blob/8a4ee1e/src/proofOfWorkNodeJs.ts#L82)*
+*Defined in [proofOfWorkNodeJs.ts:82](https://github.com/iota-pico/pow-nodejs/blob/4e729d1/src/proofOfWorkNodeJs.ts#L82)*
 
 Perform a proof of work on a single item.
 
@@ -131,10 +131,10 @@ Perform a proof of work on a single item.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| trytes | `Trytes`   |  The trytes to perform the pow on. |
-| minWeightMagnitude | `number`   |  The minimum weight magnitude. |
+| trytes | `Trytes` |  The trytes to perform the pow on. |
+| minWeightMagnitude | `number` |  The minimum weight magnitude. |
 
-**Returns:** `Promise`.<`Trytes`>
+**Returns:** `Promise`<`Trytes`>
 The trytes produced by the proof of work.
 
 ___

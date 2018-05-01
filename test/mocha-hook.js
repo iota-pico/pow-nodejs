@@ -1,3 +1,4 @@
 require('ts-node').register({ 
-    project: 'test/tsconfig.json'
+    project: 'test/tsconfig.json',
+    transpileOnly: true
 })
