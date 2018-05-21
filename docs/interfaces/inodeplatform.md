@@ -28,14 +28,14 @@ INodePlatform interface.
 
 ▸ **loadLibrary**(filename: *`string`*, functions: *`any`*): `any`
 
-*Defined in [INodePlatform.ts:11](https://github.com/iota-pico/pow-nodejs/blob/4e729d1/src/INodePlatform.ts#L11)*
+*Defined in [INodePlatform.ts:11](https://github.com/iota-pico/pow-nodejs/blob/08fb99d/src/INodePlatform.ts#L11)*
 
 **Parameters:**
 
 | Param | Type |
 | ------ | ------ |
-| filename | `string` | 
-| functions | `any` | 
+| filename | `string` |
+| functions | `any` |
 
 **Returns:** `any`
 
@@ -46,14 +46,14 @@ ___
 
 ▸ **lstat**(path: *`string`*, callback: *`function`*): `void`
 
-*Defined in [INodePlatform.ts:10](https://github.com/iota-pico/pow-nodejs/blob/4e729d1/src/INodePlatform.ts#L10)*
+*Defined in [INodePlatform.ts:10](https://github.com/iota-pico/pow-nodejs/blob/08fb99d/src/INodePlatform.ts#L10)*
 
 **Parameters:**
 
 | Param | Type |
 | ------ | ------ |
-| path | `string` | 
-| callback | `function` | 
+| path | `string` |
+| callback | `function` |
 
 **Returns:** `void`
 
@@ -64,13 +64,13 @@ ___
 
 ▸ **pathJoin**(...args: *`any`[]*): `string`
 
-*Defined in [INodePlatform.ts:8](https://github.com/iota-pico/pow-nodejs/blob/4e729d1/src/INodePlatform.ts#L8)*
+*Defined in [INodePlatform.ts:8](https://github.com/iota-pico/pow-nodejs/blob/08fb99d/src/INodePlatform.ts#L8)*
 
 **Parameters:**
 
 | Param | Type |
 | ------ | ------ |
-| `Rest` args | `any`[] | 
+| `Rest` args | `any`[] |
 
 **Returns:** `string`
 
@@ -81,13 +81,13 @@ ___
 
 ▸ **pathResolve**(path: *`string`*): `string`
 
-*Defined in [INodePlatform.ts:7](https://github.com/iota-pico/pow-nodejs/blob/4e729d1/src/INodePlatform.ts#L7)*
+*Defined in [INodePlatform.ts:7](https://github.com/iota-pico/pow-nodejs/blob/08fb99d/src/INodePlatform.ts#L7)*
 
 **Parameters:**
 
 | Param | Type |
 | ------ | ------ |
-| path | `string` | 
+| path | `string` |
 
 **Returns:** `string`
 
@@ -98,7 +98,7 @@ ___
 
 ▸ **platform**(): `string`
 
-*Defined in [INodePlatform.ts:9](https://github.com/iota-pico/pow-nodejs/blob/4e729d1/src/INodePlatform.ts#L9)*
+*Defined in [INodePlatform.ts:9](https://github.com/iota-pico/pow-nodejs/blob/08fb99d/src/INodePlatform.ts#L9)*
 
 **Returns:** `string`
 
