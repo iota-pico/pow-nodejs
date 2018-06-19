@@ -28,7 +28,7 @@ INodePlatform interface.
 
 ▸ **loadLibrary**(filename: *`string`*, functions: *`any`*): `any`
 
-*Defined in [INodePlatform.ts:11](https://github.com/iota-pico/pow-nodejs/blob/08fb99d/src/INodePlatform.ts#L11)*
+*Defined in [INodePlatform.ts:11](https://github.com/iota-pico/pow-nodejs/blob/346a5a3/src/INodePlatform.ts#L11)*
 
 **Parameters:**
 
@@ -46,7 +46,7 @@ ___
 
 ▸ **lstat**(path: *`string`*, callback: *`function`*): `void`
 
-*Defined in [INodePlatform.ts:10](https://github.com/iota-pico/pow-nodejs/blob/08fb99d/src/INodePlatform.ts#L10)*
+*Defined in [INodePlatform.ts:10](https://github.com/iota-pico/pow-nodejs/blob/346a5a3/src/INodePlatform.ts#L10)*
 
 **Parameters:**
 
@@ -64,7 +64,7 @@ ___
 
 ▸ **pathJoin**(...args: *`any`[]*): `string`
 
-*Defined in [INodePlatform.ts:8](https://github.com/iota-pico/pow-nodejs/blob/08fb99d/src/INodePlatform.ts#L8)*
+*Defined in [INodePlatform.ts:8](https://github.com/iota-pico/pow-nodejs/blob/346a5a3/src/INodePlatform.ts#L8)*
 
 **Parameters:**
 
@@ -81,7 +81,7 @@ ___
 
 ▸ **pathResolve**(path: *`string`*): `string`
 
-*Defined in [INodePlatform.ts:7](https://github.com/iota-pico/pow-nodejs/blob/08fb99d/src/INodePlatform.ts#L7)*
+*Defined in [INodePlatform.ts:7](https://github.com/iota-pico/pow-nodejs/blob/346a5a3/src/INodePlatform.ts#L7)*
 
 **Parameters:**
 
@@ -98,7 +98,7 @@ ___
 
 ▸ **platform**(): `string`
 
-*Defined in [INodePlatform.ts:9](https://github.com/iota-pico/pow-nodejs/blob/08fb99d/src/INodePlatform.ts#L9)*
+*Defined in [INodePlatform.ts:9](https://github.com/iota-pico/pow-nodejs/blob/346a5a3/src/INodePlatform.ts#L9)*
 
 **Returns:** `string`
 

@@ -125,7 +125,7 @@
                 "function-regex": "^[a-z][\\w\\d]+$"
             }
         ],
-        "import-name": true,
+        "import-name": false,
         "interface-name": [
             true
         ],
