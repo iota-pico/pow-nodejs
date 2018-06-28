@@ -1,6 +1,6 @@
 {
     "name": "@iota-pico/pow-nodejs",
-    "version": "0.9.6",
+    "version": "0.9.7",
     "description": "IOTA Pico Framework Proof Of Work NodeJS",
     "typings": "dist/index.d.ts",
     "main": "dist/index.js",
@@ -47,9 +47,9 @@
         "dist": "npm-run-all build test pkg docs"
     },
     "dependencies": {
-        "@iota-pico/core": "^0.9.6",
-        "@iota-pico/crypto": "^0.9.6",
-        "@iota-pico/data": "^0.9.6",
+        "@iota-pico/core": "^0.9.7",
+        "@iota-pico/crypto": "^0.9.7",
+        "@iota-pico/data": "^0.9.7",
         "ffi": "^2.2.0"
     },
     "devDependencies": {
@@ -58,11 +58,11 @@
         "@babel/preset-env": "^7.0.0-beta.42",
         "@babel/runtime": "^7.0.0-beta.42",
         "@types/chai": "^4.1.4",
-        "@types/ffi": "^0.1.0",
-        "@types/mocha": "^5.2.0",
-        "@types/node": "^10.3.4",
+        "@types/ffi": "^0.2.0",
+        "@types/mocha": "^5.2.3",
+        "@types/node": "^10.3.6",
         "@types/sinon": "^5.0.1",
-        "babel-loader": "^8.0.0-beta.0",
+        "babel-loader": "^8.0.0-beta.4",
         "babel-plugin-transform-builtin-extend": "^1.1.2",
         "chai": "^4.1.2",
         "coveralls": "^3.0.1",
@@ -73,17 +73,17 @@
         "nsp": "^3.2.1",
         "nyc": "^12.0.2",
         "rimraf": "^2.6.2",
-        "sinon": "^6.0.0",
+        "sinon": "^6.0.1",
         "source-map-support": "^0.5.6",
-        "ts-node": "^6.0.3",
+        "ts-node": "^7.0.0",
         "tslint": "^5.10.0",
         "tslint-eslint-rules": "^5.3.1",
         "tslint-microsoft-contrib": "^5.0.3",
         "typedoc": "^0.11.1",
         "typedoc-plugin-markdown": "^1.1.10",
         "typescript": "^2.9.2",
-        "uglifyjs-webpack-plugin": "^1.2.5",
-        "webpack": "^4.8.3",
+        "uglifyjs-webpack-plugin": "^1.2.7",
+        "webpack": "^4.12.2",
         "webpack-cli": "^3.0.8"
     }
 }

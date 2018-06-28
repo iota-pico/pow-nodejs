@@ -1,5 +1,4 @@
 const path = require('path');
-const fs = require('fs');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const packageJson = require('./package.json')
 
@@ -10,9 +9,20 @@ if (isProd) {
     plugins.push(new UglifyJsPlugin());
 }
 
-const pkgName = packageJson.name.replace("@", "").replace("/", "-");
+const calcPackageName = (packageJsonName) => packageJsonName.replace("@", "").replace("/", "-");
+const calcRootName = (pkgName) => pkgName.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase()).replace(/ /g, "");
 
-const rootName = pkgName.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase()).replace(/ /g, "");
+const pkgName = calcPackageName(packageJson.name);
+const rootName = calcRootName(pkgName);
+
+const orgName = packageJson.name.indexOf("@") === 0 ? packageJson.name.split("/")[0] : undefined;
+const externals = [];
+
+if (orgName) {
+    externals.push(new RegExp(`^(${orgName})`));
+}
+
+externals.push("ffi");
 
 module.exports = {
     entry: path.resolve(__dirname, './dist/index.js'),
@@ -30,9 +40,7 @@ module.exports = {
         globalObject: 'typeof self !== \'undefined\' ? self : this'
     },
     target: "node",
-    externals: {
-        "ffi": "ffi"
-    },
+    externals,
     mode: isProd ? "production" : "development",
     devtool: isProd ? undefined : "inline-source-map",
     module: {
