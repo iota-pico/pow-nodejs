@@ -334,6 +334,8 @@
                 "requireParamDescription": true,
                 "requireReturnDescription": true
             }
-        ]
+        ],
+        "file-name-casing": false,
+        "no-unused-variable": false
     }
 }
