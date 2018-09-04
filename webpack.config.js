@@ -25,7 +25,7 @@ if (orgName) {
 externals.push("ffi");
 
 module.exports = {
-    entry: path.resolve(__dirname, './dist/index.js'),
+    entry: path.resolve(__dirname, './dist.es6/index.js'),
     output: {
         path: path.resolve(__dirname, './pkg'),
         filename: pkgName + (isProd ? '.min' : '') + '.js',
@@ -43,37 +43,6 @@ module.exports = {
     externals,
     mode: isProd ? "production" : "development",
     devtool: isProd ? undefined : "inline-source-map",
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                    options: {
-                        "presets": [
-                            "@babel/preset-env"
-                        ],
-                        "plugins": [
-                            [
-                                "@babel/plugin-transform-runtime",
-                                {
-                                    "helpers": false,
-                                    "regenerator": true
-                                }
-                            ],
-                            [
-                                "babel-plugin-transform-builtin-extend",
-                                {
-                                    "globals": ["Error"]
-                                }
-                            ]
-                        ]
-                    }
-                }
-            }
-        ]
-    },
     node: {
         fs: "empty",
         path: "empty",
