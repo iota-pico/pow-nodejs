@@ -1,6 +1,6 @@
 {
     "name": "@iota-pico/pow-nodejs",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "IOTA Pico Framework Proof Of Work NodeJS",
     "typings": "dist/index.d.ts",
     "main": "pkg/iota-pico-pow-nodejs.js",
@@ -51,18 +51,18 @@
         "dist": "npm-run-all build test pkg docs"
     },
     "dependencies": {
-        "@iota-pico/core": "^1.0.0",
-        "@iota-pico/crypto": "^1.0.0",
-        "@iota-pico/data": "^1.0.0",
+        "@iota-pico/core": "^1.0.1",
+        "@iota-pico/crypto": "^1.0.1",
+        "@iota-pico/data": "^1.0.1",
         "ffi": "github:node-ffi/node-ffi"
     },
     "devDependencies": {
-        "@types/chai": "^4.1.4",
+        "@types/chai": "^4.1.5",
         "@types/ffi": "^0.2.0",
         "@types/mocha": "^5.2.5",
-        "@types/node": "^10.5.4",
+        "@types/node": "^10.11.2",
         "@types/sinon": "^5.0.1",
-        "chai": "^4.1.2",
+        "chai": "^4.2.0",
         "coveralls": "^3.0.2",
         "cross-env": "^5.2.0",
         "minicat": "^1.0.0",
@@ -71,17 +71,17 @@
         "nyc": "^13.0.1",
         "replace-in-file": "^3.4.0",
         "rimraf": "^2.6.2",
-        "sinon": "^6.1.4",
+        "sinon": "^6.3.4",
         "source-map-support": "^0.5.6",
+        "terser-webpack-plugin": "^1.1.0",
         "ts-node": "^7.0.0",
         "tslint": "^5.11.0",
         "tslint-eslint-rules": "^5.3.1",
         "tslint-microsoft-contrib": "^5.1.0",
         "typedoc": "^0.12.0",
         "typedoc-plugin-markdown": "^1.1.10",
-        "typescript": "^3.0.3",
-        "uglifyjs-webpack-plugin": "^1.2.7",
-        "webpack": "^4.16.3",
-        "webpack-cli": "^3.1.0"
+        "typescript": "^3.1.1",
+        "webpack": "^4.20.2",
+        "webpack-cli": "^3.1.1"
     }
 }

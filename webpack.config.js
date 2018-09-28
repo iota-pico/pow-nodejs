@@ -1,13 +1,8 @@
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserJsPlugin = require('terser-webpack-plugin');
 const packageJson = require('./package.json')
 
 const isProd = process.env.NODE_ENV === 'production';
-
-const plugins = [];
-if (isProd) {
-    plugins.push(new UglifyJsPlugin());
-}
 
 const calcPackageName = (packageJsonName) => packageJsonName.replace("@", "").replace("/", "-");
 const calcRootName = (pkgName) => pkgName.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase()).replace(/ /g, "");
@@ -54,5 +49,7 @@ module.exports = {
         Buffer: false,
         setImmediate: false
     },
-    plugins
+    optimization: {
+        minimizer: isProd ? [ new TerserJsPlugin() ] : []
+    }
 };
