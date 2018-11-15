@@ -48,7 +48,7 @@ Create a new instance of ProofOfWork.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | `Optional` nodePlatform | [INodePlatform](../interfaces/inodeplatform.md) |  Provides platform specific functions, optional mostly used for testing. |
 | `Optional` timeService | `ITimeService` |  Service to get the time for attachments. |
@@ -67,7 +67,7 @@ ___
 
 *Inherited from ProofOfWorkBase.MAX_TIMESTAMP_VALUE*
 
-*Defined in D:/Workarea/iota-pico/pow-nodejs/node_modules/@iota-pico/crypto/dist/proofOfWork/proofOfWorkBase.d.ts:12*
+*Defined in D:/Workarea/iota.eco/iota-pico/pow-nodejs/node_modules/@iota-pico/crypto/dist/proofOfWork/proofOfWorkBase.d.ts:12*
 
 The maximum timestamp value used in proof of work.
 
@@ -98,13 +98,13 @@ ___
 
 *Inherited from ProofOfWorkBase.pow*
 
-*Defined in D:/Workarea/iota-pico/pow-nodejs/node_modules/@iota-pico/crypto/dist/proofOfWork/proofOfWorkBase.d.ts:32*
+*Defined in D:/Workarea/iota.eco/iota-pico/pow-nodejs/node_modules/@iota-pico/crypto/dist/proofOfWork/proofOfWorkBase.d.ts:32*
 
 Perform a proof of work on the data.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | trunkTransaction | `Hash` |  The trunkTransaction to use for the pow. |
 | branchTransaction | `Hash` |  The branchTransaction to use for the pow. |
@@ -129,7 +129,7 @@ Perform a proof of work on a single item.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | trytes | `Trytes` |  The trytes to perform the pow on. |
 | minWeightMagnitude | `number` |  The minimum weight magnitude. |

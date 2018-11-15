@@ -32,7 +32,7 @@ INodePlatform interface.
 
 **Parameters:**
 
-| Param | Type |
+| Name | Type |
 | ------ | ------ |
 | filename | `string` |
 | functions | `any` |
@@ -50,7 +50,7 @@ ___
 
 **Parameters:**
 
-| Param | Type |
+| Name | Type |
 | ------ | ------ |
 | path | `string` |
 | callback | `function` |
@@ -68,7 +68,7 @@ ___
 
 **Parameters:**
 
-| Param | Type |
+| Name | Type |
 | ------ | ------ |
 | `Rest` args | `any`[] |
 
@@ -85,7 +85,7 @@ ___
 
 **Parameters:**
 
-| Param | Type |
+| Name | Type |
 | ------ | ------ |
 | path | `string` |
 
