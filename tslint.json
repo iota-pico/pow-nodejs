@@ -1,7 +1,7 @@
 {
     "extends": [
         "tslint:all",
-        "tslint-microsoft-contrib",
+        "tslint-microsoft-contrib/recommended",
         "tslint-eslint-rules"
     ],
     "rules": {
@@ -14,7 +14,6 @@
         "no-document-write": true,
         "no-eval": true,
         "no-exec-script": true,
-        "no-function-constructor-with-string-args": true,
         "no-http-string": [
             false
         ],
@@ -75,7 +74,6 @@
         "no-stateless-class": false,
         "no-string-literal": true,
         "no-string-throw": true,
-        "no-unnecessary-bind": true,
         "no-unnecessary-callback-wrapper": true,
         "no-unnecessary-initializer": true,
         "no-unnecessary-override": true,
